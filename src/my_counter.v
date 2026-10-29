@@ -1,15 +1,15 @@
-module my_counter (
-    input  wire       clk,
-    input  wire       rst_n,
-    output reg  [3:0] counter_out
-);
+module alu(a,b,opcode,r);
+    input [31:0] a;
+    input [31:0] b;
+    input [6:0] opcode;
+    output reg [31:0] r;
 
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            counter_out <= 4'b0000;
-        end else begin
-            counter_out <= counter_out + 1'b1;
-        end
+    always @* begin
+        r = 32'b0;
+        case (opcode)
+
+            7'b0: r = 32'b0;
+            7'b0000001: r = a+b;
+        endcase
     end
-
 endmodule
