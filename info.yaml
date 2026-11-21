@@ -1,22 +1,22 @@
 # Tiny Tapeout project information
 project:
-  title:        "Simple 4-bit Counter"
+  title:        "Simple rv32i alu"
   author:       "Steghideeeee"
   discord:      ""
-  description:  "A simple 4-bit up counter for Tiny Tapeout"
+  description:  "A simple alu for tinytapeout"
   language:     "Verilog"
-  clock_hz:     10000000       # 10 MHz
+  clock_hz:     32000000       # 32 MHz
 
   # How many tiles your design occupies?
-  tiles: "1x1"
+  tiles: "1x2"
 
   # GitHub kullanıcı adınla benzersiz yap (Örn: tt_um_ahmet_counter)
-  top_module:  "tt_um_project"
+  top_module:  "tt_um_steghide"
 
   # List your project's source files here.
   source_files:
     - "project.v"
-    - "my_counter.v"
+    - "systemickernelialu.v"
 
 # The pinout of your project. 
 pinout:
