@@ -13,38 +13,38 @@ project:
   # GitHub kullanıcı adınla benzersiz yap (Örn: tt_um_ahmet_counter)
   top_module:  "tt_um_project"
 
-  # List your project's source files here.
+  # List your project's source files here. (Girintiler düzeltildi)
   source_files:
     - "project.v"
     - "systemickernelialu.v"
 
 # The pinout of your project. 
 pinout:
-  # Inputs (Sistem clk ve rst donanımsal olarak ayrı gelir, ui pinlerini boş bırakabilirsin)
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
+  # Inputs (QSPI SCLK ve CS# pinlerini belirtiyoruz)
+  ui[0]: "QSPI IO0"
+  ui[1]: "QSPI IO1"
+  ui[2]: "QSPI IO2"
+  ui[3]: "QSPI IO3"
+  ui[4]: "QSPI SCLK"
+  ui[5]: "QSPI CS#"
   ui[6]: ""
   ui[7]: ""
 
-  # Outputs (4 bitlik sayacımızı ilk 4 pine bağlıyoruz)
-  uo[0]: "count[0]"
-  uo[1]: "count[1]"
-  uo[2]: "count[2]"
-  uo[3]: "count[3]"
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  # Outputs (ALU sonucunun ilk 4 bitini LED'lere veriyoruz)
+  uo[0]: "result[0]"
+  uo[1]: "result[1]"
+  uo[2]: "result[2]"
+  uo[3]: "result[3]"
+  uo[4]: "result[4]"
+  uo[5]: "result[5]"
+  uo[6]: "result[6]"
+  uo[7]: "result[7]"
 
-  # Bidirectional pins (Kullanmıyoruz, boş kalabilir)
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
+  # Bidirectional pins (QSPI çift yönlü veri hatları uio[3:0] üzerinde)
+  uio[0]: "QSPI IO[0]"
+  uio[1]: "QSPI IO[1]"
+  uio[2]: "QSPI IO[2]"
+  uio[3]: "QSPI IO[3]"
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""
