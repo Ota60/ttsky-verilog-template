@@ -1,6 +1,6 @@
 `default_nettype none
 
-module tt_um_steghide (
+module tt_um_project (
     input  wire [7:0] ui_in,    // Sabit girişler: [4] SCLK, [5] CS# (Veri hatlarını artık uio üzerinden alacağız)
     output wire [7:0] uo_out,   // Çıkışlar (LED'ler vb.)
     inout  wire [7:0] uio,      // Çift yönlü pinler: [3:0] QSPI IO[3:0]
