@@ -11,7 +11,7 @@ project:
   tiles: "1x2"
 
   # GitHub kullanıcı adınla benzersiz yap (Örn: tt_um_ahmet_counter)
-  top_module:  "tt_um_steghide"
+  top_module:  "tt_um_project"
 
   # List your project's source files here.
   source_files:
